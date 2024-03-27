@@ -1,0 +1,111 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.31960853096600483 0.16487125139371983 0.9330958457723522 2.2443741164734585
+  position 0.7443793184111609 -1.127579997635872 0.9766218636037267
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  children [
+    DEF Body Pose {
+      translation 0 0 0.0415
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 197.44303720110887
+        anchor 0.045 0 0.025
+      }
+      device [
+        DEF ps_1 PositionSensor {
+          name "ps_1"
+        }
+        RotationalMotor {
+          name "Motor_1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.045 0 0.025
+        rotation -0.6971557248346224 -0.16947343708115675 -0.6966007819793282 3.4776118089176387
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0.7 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.025
+            }
+          }
+        ]
+        boundingObject USE Wheel
+        physics DEF wheel_physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 197.44303773628172
+        anchor -0.045 0 0.025
+      }
+      device [
+        DEF ps_2 PositionSensor {
+          name "ps_2"
+        }
+        RotationalMotor {
+          name "Motor_2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.045 0 0.025
+        rotation -0.6971557481612717 -0.1694732453180438 -0.6966008052874099 3.4776114358188095
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0.7 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.025
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE Wheel
+        physics DEF wheel_physics Physics {
+        }
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "auto_calculation"
+}

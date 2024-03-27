@@ -1,0 +1,75 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+
+WorldInfo {
+  info [
+    "This example shows a robot following a red ball in Webots."
+    "The robot uses a HSV thresholding (using OpenCV) to detect the red ball and a simple P controller to track it."
+  ]
+  title "Webots Visual Tracking Example"
+}
+Viewpoint {
+  orientation -0.27883519151641056 0.13828803706646248 0.9503301293636393 2.260727493349755
+  position 1.4868576428098002 -1.6291687684934413 1.521104226735151
+}
+RectangleArena {
+  floorSize 3 3
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+TurtleBot3Burger {
+  controller "visual_tracker"
+  controllerArgs [
+    ""
+  ]
+  extensionSlot [
+    Camera {
+      translation 0.02 0 0.03
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.03 0.1 0.03
+          }
+        }
+      ]
+    }
+  ]
+}
+DEF BALL Solid {
+  translation 1 0 0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+        normalMapFactor 0
+        occlusionMapStrength 0
+        emissiveIntensity 0
+      }
+      geometry Sphere {
+        radius 0.1
+        subdivision 4
+      }
+    }
+  ]
+}
+Robot {
+  children [
+    Camera {
+      translation 0 0 0.18
+      name "CamLeft"
+      width 512
+      height 512
+    }
+  ]
+  controller "image_with_camera"
+  supervisor TRUE
+}

@@ -1,0 +1,6 @@
+current path: /home/neaf2080/code/yen/webots_arm/integration/controllers/train_RL_env
+current time: 2024-03-10 14:57:53
+
+
+train along time
+episode: 86659
