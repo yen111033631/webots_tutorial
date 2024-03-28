@@ -17,7 +17,8 @@
 3. create a python virtual environment
 
 4. in the environment, install python library in need with the terminal path in "webots_tutorial" folder  
-`pip install -r requirements.txt`
+`pip install -r requirements.txt`  
+`pip install -r requirements_noversions.txt`, if you don't use python 3.8.18
 
 5. install pytorch https://pytorch.org/
 
@@ -25,7 +26,11 @@
     * for windows https://cyberbotics.com/
     * for ubuntu https://cyberbotics.com/doc/guide/installation-procedure#installing-the-debian-package-with-the-advanced-packaging-tool-apt (recommended)
 
-7. launch webots with the terminal path in "webots_tutorial" folder and in the python virtual environment  
+7. add webots into your PATH (windows)  
+    add "C:\Program Files\Webots\msys64\mingw64\bin" to your PATH (maybe)  
+    try `webots` in your terminal
+
+8. launch webots with the terminal path in "webots_tutorial" folder and in the python virtual environment  
 windows: `webots .\webots-example-visual-tracking\worlds\visual_tracking.wbt`  
 ubuntu: `webots webots-example-visual-tracking/worlds/visual_tracking.wbt  `
 * if the console is like this, then you're ready! 

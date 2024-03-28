@@ -18,7 +18,7 @@ google-auth-oauthlib
 grpcio
 gymnasium
 idna
-ikpy
+# ikpy
 importlib-metadata
 importlib_resources
 ipython
