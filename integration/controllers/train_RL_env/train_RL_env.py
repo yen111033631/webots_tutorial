@@ -12,7 +12,7 @@ from DQN import DQN
 from DQN_Atari import DQNAgent
 from robot_controller_env import DRV90_Robot, env_ball
 
-#------------------------------------------------------------------
+# ------------------------------------------------------------------
 # random seed 
 def setup_seed(seed):
     random.seed(seed)
@@ -24,7 +24,7 @@ def setup_seed(seed):
     torch.backends.cudnn.deterministic = True
 
 setup_seed(525)
-#------------------------------------------------------------------
+# ------------------------------------------------------------------
 # save training info 
 def save_txt(log_dir, i_frame, i_episode, mean_reward, last_big_mean_reward):
     # 指定要創建的文本文件路徑
@@ -33,7 +33,8 @@ def save_txt(log_dir, i_frame, i_episode, mean_reward, last_big_mean_reward):
     with open(txt_file_path, "a") as txt_file:
         txt_file.write(f"i_frame:\t{i_frame},\ti_episode:\t{i_episode},\tmean reward:\t{round(mean_reward, 2)},\tis_saved_model:\t{mean_reward > last_big_mean_reward}\n")
     
-    
+# ------------------------------------------------------------------
+# set log file
 class Log_file:
     def __init__(self, model_name="DQN", env_id="ball_discrete", num_episodes=0, is_save=True):
         self.model_name = model_name
@@ -310,7 +311,6 @@ def train_RL_process_cam(log_dir, num_episodes=10):
             break
 # ===================================================
 # test model
-
 def test_RL_process():
     print("test process")
     
@@ -429,7 +429,7 @@ def RL_process_random():
     # plt.ioff()
     # plt.show()
 
-
+# ===================================================
 if __name__ == "__main__":
     # -----------------------------------------------
     # env setting
@@ -439,13 +439,13 @@ if __name__ == "__main__":
     model_name = "DQN_cam"
     num_episodes = int(5e5)
     num_frames = int(1e6)
-    is_save = False
+    is_save = True
     is_random = True       # target is random or not
     is_going_to_target = False
     object_name = "cube"    # ["ball", "cube"]
     # -----------------------------------------------
     # env hyperparameter
-    big_negative_reward = -10000
+    big_negative_reward = -1000
     reward_slope = -10    
     # -----------------------------------------------
     # DQN hyperparameter
