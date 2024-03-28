@@ -2,6 +2,7 @@
 
 0. system requirements
     ```
+    windows (To Be Confirmed)
     OS: windows 10/11 or ubuntu 20.04/22.04 (recommended)
     programming language: python 3.8.18 (recommended)
     GPU: supposed to have

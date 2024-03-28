@@ -1,0 +1,73 @@
+absl-py
+asttokens
+backcall
+cachetools
+certifi
+charset-normalizer
+cloudpickle
+contourpy
+cycler
+decorator
+executing
+Farama-Notifications
+filelock
+fonttools
+fsspec
+google-auth
+google-auth-oauthlib
+grpcio
+gymnasium
+idna
+ikpy
+importlib-metadata
+importlib_resources
+ipython
+jedi
+Jinja2
+kiwisolver
+Markdown
+MarkupSafe
+matplotlib
+matplotlib-inline
+mpmath
+networkx
+numpy
+oauthlib
+opencv-python
+packaging
+pandas
+parso
+pexpect
+pickleshare
+pillow
+prompt-toolkit
+protobuf
+ptyprocess
+pure-eval
+pyasn1
+pyasn1-modules
+Pygments
+pyparsing
+python-dateutil
+pytz
+requests
+requests-oauthlib
+rsa
+# scipy
+six
+stack-data
+sympy
+tensorboard
+tensorboard-data-server
+# torch
+# torch-tb-profiler
+# torchaudio
+# torchvision
+traitlets
+# triton
+typing_extensions
+tzdata
+urllib3
+wcwidth
+Werkzeug
+zipp
