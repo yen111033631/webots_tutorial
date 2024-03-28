@@ -439,7 +439,7 @@ if __name__ == "__main__":
     model_name = "DQN_cam"
     num_episodes = int(5e5)
     num_frames = int(1e6)
-    is_save = True
+    is_save = False
     is_random = True       # target is random or not
     is_going_to_target = False
     object_name = "cube"    # ["ball", "cube"]
