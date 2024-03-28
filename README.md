@@ -25,7 +25,7 @@
     * for windows https://cyberbotics.com/
     * for ubuntu https://cyberbotics.com/doc/guide/installation-procedure#installing-the-debian-package-with-the-advanced-packaging-tool-apt (recommended)
 
-7. luanch webots with the terminal path in "webots_tutorial" folder and in the python virtual environment  
+7. launch webots with the terminal path in "webots_tutorial" folder and in the python virtual environment  
 windows: `webots .\webots-example-visual-tracking\worlds\visual_tracking.wbt`  
 ubuntu: `webots webots-example-visual-tracking/worlds/visual_tracking.wbt  `
 * if the console is like this, then you're ready! 
