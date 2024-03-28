@@ -1,3 +1,0 @@
-current machine: neaf2080
-current path: /home/neaf2080/code/yen/webots_arm/integration/controllers/train_RL_env
-current time: 2024-03-21 19:28:06

@@ -1,5 +1,0 @@
-current machine: neaf2080
-current path: /home/neaf2080/code/yen/webots_arm/integration/controllers/train_RL_env
-current time: 2024-03-20 16:11:34
-end time: 2024-03-20 16:11:41
-num_episodes: 50000

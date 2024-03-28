@@ -1,9 +1,9 @@
 # webots_tutorial
 
-0. system
+0. system requirements
     ```
-    OS: windows or ubuntu
-    programming language: python 3.8 (recommended)
+    OS: windows 10/11 or ubuntu 20.04/22.04 (recommended)
+    programming language: python 3.8.18 (recommended)
     GPU: supposed to have
     ```
 
