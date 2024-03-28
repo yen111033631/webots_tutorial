@@ -5,11 +5,15 @@ TIME_STEP = 32
 robot = Supervisor()  # create Supervisor instance
 
 # [CODE PLACEHOLDER 1]
-bb8_node = robot.getFromDef('BB-8')
-translation_field = bb8_node.getField('translation')
+
 
 root_node = robot.getRoot()
 children_field = root_node.getField('children')
+
+children_field.importMFNodeFromString(-1, 'DEF BB-8 BB-8 { }')
+
+bb8_node = robot.getFromDef('BB-8')
+translation_field = bb8_node.getField('translation')
 
 children_field.importMFNodeFromString(-1, 'DEF BALL Ball { translation 0 1 1 }')
 ball_node = robot.getFromDef('BALL')
