@@ -1,5 +1,0 @@
-current machine: SuperWhite3080
-current path: C:\Users\yen\code\from_wsl\webots_arm\integration\controllers\train_RL_env
-current time: 2024-03-11 21:35:21
-end time: 2024-03-11 21:36:28
-num_episodes: 20

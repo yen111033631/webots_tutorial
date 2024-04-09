@@ -1,2 +1,0 @@
-current path: C:\Users\yen\code\from_wsl\webots_arm\integration\controllers\train_RL_env
-current time: 2024-03-10 14:50:37
